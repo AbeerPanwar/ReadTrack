@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "952115720746",
+    "project_id": "readtrack-63aef",
+    "storage_bucket": "readtrack-63aef.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952115720746:android:efc60b1308e831053a4953",
+        "android_client_info": {
+          "package_name": "com.example.read_track"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952115720746-t504pltcndldi0u306tac312q1ijomfn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0QXuzovCG6z3Oq_iwgqrL2dDtysf9Zxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952115720746-t504pltcndldi0u306tac312q1ijomfn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "952115720746-199c73nf9rp7m67v0bgnjtgrahvok93h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.readTrack"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
