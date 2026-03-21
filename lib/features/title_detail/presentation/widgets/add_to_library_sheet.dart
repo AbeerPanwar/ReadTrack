@@ -102,7 +102,7 @@ class _AddToLibrarySheetState extends ConsumerState<AddToLibrarySheet> {
               width: 40,
               height: 4,
               decoration: BoxDecoration(
-                color: AppColors.textSecondary.withOpacity(0.3),
+                color: AppColors.textSecondary.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.circular(2),
               ),
             ),
