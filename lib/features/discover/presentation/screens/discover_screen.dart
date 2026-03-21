@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:read_track/features/title_detail/presentation/screens/title_detail_screen.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../data/seed_data.dart';
 import '../providers/discover_provider.dart';
@@ -210,7 +211,16 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
                                   mainAxisSpacing: 12,
                                 ),
                             itemCount: titles.length,
-                            itemBuilder: (_, i) => TitleCard(title: titles[i]),
+                            itemBuilder: (_, i) => TitleCard(
+                              title: titles[i],
+                              onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) =>
+                                      TitleDetailScreen(title: titles[i]),
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                 ),
@@ -224,13 +234,29 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
                 child: SectionHeader(title: '🔥 Trending This Week'),
               ),
               SliverToBoxAdapter(
-                child: HorizontalTitleList(titlesAsync: trending),
+                child: HorizontalTitleList(
+                  titlesAsync: trending,
+                  onTap: (title) => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => TitleDetailScreen(title: title),
+                    ),
+                  ),
+                ),
               ),
 
               // New Releases
               SliverToBoxAdapter(child: SectionHeader(title: '✨ New Releases')),
               SliverToBoxAdapter(
-                child: HorizontalTitleList(titlesAsync: newReleases),
+                child: HorizontalTitleList(
+                  titlesAsync: newReleases,
+                  onTap: (title) => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => TitleDetailScreen(title: title),
+                    ),
+                  ),
+                ),
               ),
 
               // Top Rated
@@ -257,7 +283,15 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
                             mainAxisSpacing: 12,
                           ),
                       itemCount: titles.length,
-                      itemBuilder: (_, i) => TitleCard(title: titles[i]),
+                      itemBuilder: (_, i) => TitleCard(
+                        title: titles[i],
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => TitleDetailScreen(title: titles[i]),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
